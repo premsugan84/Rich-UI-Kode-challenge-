@@ -15,16 +15,52 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#login").click(function(){
+					$("#overlay").fadeIn("slow");
+					$("#overlay_div").fadeIn("slow");
+				});
+			
+				$("#close_button").click(function(){
+					$("#overlay").fadeOut("fast");
+					$("#overlay_div").fadeOut("fast");
+				});
+
+				$("#close_regbutton").click(function(){
+					$("#overlay").fadeOut("fast");
+					$("#overlay_div").fadeOut("fast");
+					$("#overlay_register").fadeOut("slow");
+				});
+				
+				$("#lnkRegister").click(function(){
+					$("#overlay_div").fadeOut("fast");
+					$("#overlay_register").fadeIn("slow");
+				});
+				$("#submitbtn").click(function(){
+					$("#overlay_register").fadeOut("slow");		
+				    $("#overlay").fadeOut("fast");
+					$("#overlay_div").fadeOut("fast");		
+				});
+				$("#backtologin").click(function(){
+					$("#overlay_register").fadeOut("slow");		
+				    $("#overlay").fadeIn("slow");
+					$("#overlay_div").fadeIn("slow");		
+				});
+			});
+		</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/login.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
 	<body>
 
+			
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
@@ -32,11 +68,13 @@
 					<li><a href="#work">Work</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<li><a href="#" id="login">Login</a></li>
 				</ul>
 			</nav>
-
+			<br>
+			<br>
 		<!-- Home -->
-			<div class="wrapper style1 first">
+			<div class="wrapper style1 first" id="sathish">
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u">
@@ -233,5 +271,106 @@
 				</article>
 			</div>
 
+
+		<!-- Login -->
+
+		<div id ="overlay"></div>
+		<div id="overlay_div">
+		    <!--<div class="wrapper style5">-->
+		    	<article id="Loginid">
+					<div id="login_title">
+						<div id="close_button">X</div><br/>
+						<h2>LOGIN</h2>
+					</div>
+					<div class="login_content" style="text-align:center">
+						<div class="row">
+							<div class="12u">
+								<form method="post" action="#">
+									<div>
+										<input type="text" name="username" id="username" placeholder="UserName" />
+										<br>
+										<input type="password" name="password" id="password" placeholder="Password" />
+										<br>
+										<input type="submit" value="SIGN IN" />
+										<br><b>
+										<a href="forgotpage.html">Forgot UserName?</a>|<a href="forgotpage.html">Forgot Password?</a>
+										<br><p><a id="lnkRegister" href="#">REGISTER NOW</a></p></b>
+										
+										<!--<div class="row">
+											<div class="6u">
+												<input type="text" name="username" id="username" align="center" placeholder="UserName" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="6u">
+												<p align="center">
+												<input type="password" name="password" id="password" placeholder="Password" /></p>
+											</div>
+										</div>							
+										
+										<div class="row 200%">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" value="Signin" /></li>													
+												</ul>
+											</div>
+										</div>
+										<div class="row">
+											<div class="6u">
+												<a href="forgotpage.html">Forgot UserName?</a>|<a href="forgotpage.html">Forgot Password?</a>
+											</div>
+										</div>-->
+									</div>
+								</form>
+							</div>
+						</div>				
+					</div>
+				</article>
+			<!--</div>-->
+		</div>
+		
+
+		 <!--Register Dialog Section-->
+		 <div id="overlay_register">
+    		<div id="register_page">
+	
+            	<div id="register_page_div" class="register-div">
+                	<div class="register-dialog">
+                		
+	                    	<div class="register-dialog-title">
+	                    		<div id="close_regbutton">X</div>
+	                        	<a href="#" id="backtologin" class="open-login">< Back to Login</a>
+	                        	<h2 style="text-align:center">REGISTER NOW</h2>
+	                    	</div>
+	                    	<div id="register-box">
+		                    	<div class="register-dialog-content" style="text-align:center">
+		                            <input name="txtName" type="text" maxlength="15" id="txtName" tabindex="1" class="inputstyle" placeholder="Name" /><br><br>
+		                            <input name="txtEmail" type="text" maxlength="50" id="txtEmail" tabindex="2" class="inputstyle" placeholder="Email ID" /><br><br>
+		                            <input name="txtPwd" type="password" maxlength="15" id="txtPwd" tabindex="3" class="inputstyle" placeholder="Password" /><br><br>
+		                            <input name="txtretypwd" type="password" maxlength="15" id="txtretypwd" tabindex="4" class="inputstyle" 
+		                            placeholder="Re Enter Password" /><br><br>
+		                            <input name="txtphoneno" type="text" maxlength="15" id="txtphoneno" tabindex="5" class="inputstyle" 
+		                            placeholder="Phone Number" /><br><br>
+		                            <input name="txtssn" type="text" maxlength="15" id="txtssn" tabindex="5" class="inputstyle" 
+		                            placeholder="SSN" /><br><br>
+		                            <input id="submitbtn" type="submit" value="Submit" />
+										<br>
+		                        </div>
+	                    	</div>
+                     </div>
+
+                </div>
+         	</div>
+         </div>
+
+
+        </div>
+	<!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="popup.js"></script>-->	
 	</body>
+
+		
+		
+
+
 </html>
