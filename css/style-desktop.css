@@ -11,6 +11,7 @@
 	body,input,textarea,select
 	{
 		font-size: 13pt;
+		padding-left: 10px;
 	}
 
 	h1
@@ -21,7 +22,7 @@
 
 	h2
 	{
-		font-size: 2em;
+		font-size: 1em;
 		letter-spacing: -0.015em;
 	}
 	
@@ -68,7 +69,7 @@
 				margin: 0 0.5em 0 0.5em;
 			}
 
-	/* Button */
+	/* Button*/ 
 	
 		input[type="button"],
 		input[type="submit"],
@@ -87,6 +88,8 @@
 				font-size: 1.5em;
 				letter-spacing: -0.025em;
 			}
+
+	
 
 	/* Box */
 
@@ -205,6 +208,150 @@
 		{
 			font-size: 0.9em;
 		}
+
+	#login
+	{
+		cursor:pointer;
+	}
+	#overlay
+	{
+		display:none;
+		width:100%;
+		height:100%;
+		position:fixed;
+		background-color: black;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		opacity:0.7;
+		z-index:1000;
+	}
+
+	#overlay_div
+	{
+		display:none;
+		position: absolute;
+		margin:0 auto;
+		background-color: #b0e0e6;
+		width:350px;
+		height:400px;
+		margin-left: -350px;
+		top:20%;
+		right:40%;
+		bottom:100%;
+		left:60%;
+		z-index:1500;
+		box-shadow:0 0 50px #000;
+		-o-box shadow:0 0 50px #000;
+		-moz-box-shadow:0 0 50px #000;
+		-webkit-box-shadow:0 0 50px #000;
+		-ms-box-shadow:0 0 50px #000;
+	}
+		#overlay_div h2
+		{
+			font-size: 1em
+			margin-left:auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+	#login_content
+	
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button
+		{
+			padding: 0.5em 1em 0.5em 1em;
+			font-size: 1em;
+		}
+
+		
+	
+	
+	#register_page
+		{
+			margin-left:auto;
+			margin-right:auto;
+			
+		}
+
+	
+	#register-dialog-title h2
+		{
+			font-size: 2em
+			text-align: center;
+		}
+
+		#register-box
+		{
+			width: 80%;
+			margin: auto;
+		}
+
+	#close_button
+	{
+		cursor:pointer;
+		width:30px;
+		line-height:30px;
+		background: #000;
+		color:#fff;
+		text-align:center;
+		font-size:16px;
+		font-weight:bold;
+		box-shadow:0 0 20px #777;
+		-o-box shadow:0 0 20px #777;
+		-moz-box-shadow:0 0 20px #777;
+		-webkit-box-shadow:0 0 20px #777;
+		-ms-box-shadow:0 0 20px #777;
+		postion:absolute;
+		border:solid 1px #fff;
+		float:right;
+	}
+
+#close_regbutton
+	{
+		cursor:pointer;
+		width:30px;
+		line-height:30px;
+		background: #000;
+		color:#fff;
+		text-align:center;
+		font-size:16px;
+		font-weight:bold;
+		box-shadow:0 0 20px #777;
+		-o-box shadow:0 0 20px #777;
+		-moz-box-shadow:0 0 20px #777;
+		-webkit-box-shadow:0 0 20px #777;
+		-ms-box-shadow:0 0 20px #777;
+		postion:absolute;
+		border:solid 1px #fff;
+		float:right;
+	}
+
+#overlay_register
+	{
+		display:none;
+		position: absolute;
+		margin:0 auto;
+		background-color: #b0e0e6;
+		width:350px;
+		height:600px;
+		margin-left: -350px;
+		top:20%;
+		right:40%;
+		bottom:100%;
+		left:60%;
+		z-index:1500;
+		box-shadow:0 0 50px #000;
+		-o-box shadow:0 0 50px #000;
+		-moz-box-shadow:0 0 50px #000;
+		-webkit-box-shadow:0 0 50px #000;
+		-ms-box-shadow:0 0 50px #000;
+	}
+	
+
 		
 /*********************************************************************************/
 /* Copyright                                                                     */
